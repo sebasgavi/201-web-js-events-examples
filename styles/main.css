@@ -32,6 +32,7 @@ body {
 
 .mainnav__search {
   margin-left: auto;
+  min-width: 0;
 }
 
 @media (max-width: 400px) {
@@ -71,5 +72,44 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.slider {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__strip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+.slider__img {
+  width: 400px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.slider__btn {
+  position: absolute;
+  bottom: 0px;
+}
+
+.slider__btn--left {
+  left: 0px;
+}
+
+.slider__btn--right {
+  right: 0px;
 }
 /*# sourceMappingURL=main.css.map */

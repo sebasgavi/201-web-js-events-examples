@@ -20,3 +20,17 @@ function handleWindowResize (event) {
 }
 window.addEventListener('resize', handleWindowResize);
 
+
+var btnRight = document.querySelector('.slider__btn--right');
+var strip = document.querySelector('.slider__strip');
+var posX = 0;
+function handleBtnNextClick () {
+    // translate
+    var quantity = strip.children.length;
+    if(posX > -400 * (quantity - 1)){
+        posX -= 400;
+    }
+    strip.style.transform = 'translate(' + posX + 'px, 0px)';
+}
+// handleBtnNextClick();
+btnRight.addEventListener('click', handleBtnNextClick);
