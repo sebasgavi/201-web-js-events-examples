@@ -75,7 +75,7 @@ body {
 }
 
 .slider {
-  width: 400px;
+  width: 500px;
   height: 300px;
   overflow: hidden;
   position: relative;
@@ -92,7 +92,7 @@ body {
 }
 
 .slider__img {
-  width: 400px;
+  width: 500px;
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
