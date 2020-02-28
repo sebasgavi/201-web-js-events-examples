@@ -2,7 +2,7 @@ var mainnav = document.querySelector('.mainnav');
 var hambtn = document.querySelector('.hamburguerbtn');
 
 var handleHamClick = function (event) {
-    console.log(event, 'otra cosa');
+    console.log(event, 'hola');
     /*var hasMobile = mainnav.classList.contains('mainnav--mobile');
     if(hasMobile){
         mainnav.classList.remove('mainnav--mobile');
