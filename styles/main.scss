@@ -114,6 +114,7 @@ $h: 300px;
 
 // Modal
 .modal{
+    display: none;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -130,5 +131,9 @@ $h: 300px;
         h2{
             margin-top: 0px;
         }
+    }
+
+    &--visible{
+        display: block;
     }
 }

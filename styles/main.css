@@ -146,6 +146,7 @@ body {
 }
 
 .modal {
+  display: none;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -163,5 +164,9 @@ body {
 
 .modal__panel h2 {
   margin-top: 0px;
+}
+
+.modal--visible {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */

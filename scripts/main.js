@@ -90,3 +90,19 @@ setInterval(function(){
         index = 0;
     }
 }, 1000);
+
+
+
+
+/**
+ * Modal
+ */
+var modal = document.querySelector('.modal');
+var modalOpen = document.querySelector('.modalopen');
+var modalClose = document.querySelector('.modalclose');
+modalOpen.addEventListener('click', function(){
+    modal.classList.add('modal--visible');
+});
+modalClose.addEventListener('click', function(){
+    modal.classList.remove('modal--visible');
+});
