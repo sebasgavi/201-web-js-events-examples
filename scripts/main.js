@@ -55,3 +55,20 @@ btnLeft.addEventListener('click', handleBtnPrevClick);
 //setInterval(handleBtnNextClick, 3000); // varias veces
 //handleBtnNextClick();
 
+
+
+
+/**
+ * Galery
+ */
+var main = document.querySelector('.galery__main');
+var img1 = document.querySelector('.galery__thumb');
+
+img1.addEventListener('click', function () {
+    // leer atributo src de la imagen pequeña
+    var src = img1.getAttribute('src');
+    // setear atributo src a la imagen grande
+    main.setAttribute('src', src);
+    // agregar clase active
+    img1.classList.add('galery__thumb--active');
+});
