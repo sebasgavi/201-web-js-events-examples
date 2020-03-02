@@ -81,3 +81,12 @@ function iterateThumbs (elem, index) {
 }
 thumbs.forEach(iterateThumbs);
 handleImageClick(thumbs[0]);
+
+var index = 0;
+setInterval(function(){
+    handleImageClick(thumbs[index]);
+    index++;
+    if(index >= thumbs.length){
+        index = 0;
+    }
+}, 1000);
