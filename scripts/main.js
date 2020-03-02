@@ -62,13 +62,22 @@ btnLeft.addEventListener('click', handleBtnPrevClick);
  * Galery
  */
 var main = document.querySelector('.galery__main');
-var img1 = document.querySelector('.galery__thumb');
-
-img1.addEventListener('click', function () {
+var thumbs = document.querySelectorAll('.galery__thumb');
+function handleImageClick (elem) {
     // leer atributo src de la imagen pequeña
-    var src = img1.getAttribute('src');
+    var src = elem.getAttribute('src');
     // setear atributo src a la imagen grande
     main.setAttribute('src', src);
+    thumbs.forEach(function(innerElem){
+        innerElem.classList.remove('galery__thumb--active');
+    });
     // agregar clase active
-    img1.classList.add('galery__thumb--active');
-});
+    elem.classList.add('galery__thumb--active');
+}
+function iterateThumbs (elem, index) {
+    elem.addEventListener('click', function () {
+        handleImageClick(elem);
+    });
+}
+thumbs.forEach(iterateThumbs);
+handleImageClick(thumbs[0]);
