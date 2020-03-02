@@ -101,8 +101,23 @@ var modal = document.querySelector('.modal');
 var modalOpen = document.querySelector('.modalopen');
 var modalClose = document.querySelector('.modalclose');
 modalOpen.addEventListener('click', function(){
-    modal.classList.add('modal--visible');
+    modal.classList.add('modal--block');
+    setTimeout(function(){
+        // opacity 1
+        modal.classList.add('modal--visible');
+    }, 10);
 });
-modalClose.addEventListener('click', function(){
+function closeModal (){
     modal.classList.remove('modal--visible');
+    setTimeout(function(){
+        modal.classList.remove('modal--block');
+    }, 500);
+}
+modalClose.addEventListener('click', function(){
+    closeModal();
+});
+modal.addEventListener('click', function(event){
+    if(event.target == modal){
+        closeModal();
+    }
 });
