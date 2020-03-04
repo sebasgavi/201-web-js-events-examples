@@ -121,3 +121,23 @@ modal.addEventListener('click', function(event){
         closeModal();
     }
 });
+
+
+// change paragraph text from input
+var textParagraph = document.querySelector('.textchange__paragraph');
+var textInput = document.querySelector('.textchange__input');
+function handleTextInput () {
+    var text = textInput.value;
+    textParagraph.innerText = text;
+}
+textInput.addEventListener('input', handleTextInput);
+
+
+// change opacity of image from input range
+var opacityImage = document.querySelector('.opacity__image');
+var opacityInput = document.querySelector('.opacity__input');
+function handleOpacityInput () {
+    var opacity = opacityInput.value;
+    opacityImage.style.opacity = opacity;
+}
+opacityInput.addEventListener('input', handleOpacityInput);
