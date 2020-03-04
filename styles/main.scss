@@ -157,3 +157,15 @@ $h: 300px;
         background-size: cover;
     }
 }
+
+
+
+.rotation{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+}

@@ -197,4 +197,20 @@ body {
   background-image: url(../images/el-perro-salvo-a-su-dueno-cuando-creyo-que-se-ahogaba-795273.jpg);
   background-size: cover;
 }
+
+.rotation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+}
+
+.rotation__image {
+  width: 100%;
+  height: auto;
+}
 /*# sourceMappingURL=main.css.map */

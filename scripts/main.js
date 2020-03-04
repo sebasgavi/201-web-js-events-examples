@@ -141,3 +141,14 @@ function handleOpacityInput () {
     opacityImage.style.opacity = opacity;
 }
 opacityInput.addEventListener('input', handleOpacityInput);
+
+
+// change image source from input range value
+var rotationImage = document.querySelector('.rotation__image');
+var rotationInput = document.querySelector('.rotation__input');
+function handleRotationInput () {
+    var index = rotationInput.value;
+    rotationImage.setAttribute('src', './images/emoji_' + index + '.jpg');
+}
+handleRotationInput();
+rotationInput.addEventListener('input', handleRotationInput);
